@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Example</title>
+    <link rel="shortcut icon" href="img/logo web.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            list-style: none;
+            background-image: url("img/sol\ los\ 80.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 9px;
+
+        }
+
+        h4 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+            display: flex;
+
+
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 13px;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #777;
+        }
+
+        main {
+            padding: 25px;
+            background-color: white;
+            margin: auto;
+            width: 85%;
+        }
+
+        li {
+            flex: 1;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+
+
+        .encuesta-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        form {
+            display: grid;
+            grid-row-gap: 15px;
+        }
+
+
+        label {
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="radio"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-top: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0px 0px 10px 0px rgb(8, 121, 17);
+        }
+
+        h1 {
+            color: red;
+        }
+
+        label {
+            color: red;
+        }
+
+        /*sub menu*/
+        nav li ul li {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            background-color: #777;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            padding: 15px 0px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+
+        nav li:hover>ul li {
+            visibility: visible;
+            opacity: 1;
+            list-style: none;
+            position: absolute;
+            top: 165px;
+            left: 135px;
+        }
+
+        nav li ul::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+
+        }
+
+        nav li ul li a {
+            display: block;
+            color: #fff;
+            padding: 6px;
+            padding-left: 14px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: all 300ms ease;
+        }
+
+        nav li ul li a:hover {
+            background-color: rgb(193, 206, 254);
+            color: white;
+            transform: scale(1.1);
+            padding-left: 30px;
+            font-size: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h4><a class="navbar-brand" href=""><img src="img/logo web.png" alt="logo" height="40">Mundo Retro</a>
+        </h4>
+    </header>
+    <nav>
+
+        <li><a href="inicio.html"><b>Inicio</b></a>
+            <ul>
+                <li><a href="encuesta.html"><b>encuesta</b></a></li>
+            </ul>
+        </li>
+        <li><a href="requisitos.html"><b>Requisitos</b></a></li>
+        <li><a href="Tutorial.html"><b>Tutorial</b></a></li>
+        <li><a href="Juegos.html"><b>Juegos</b></a></li>
+
+    </nav>
+
+    <div class="encuesta-container">
+        <h1>Encuesta de Satisfacción</h1>
+        <form action="procesar_encuesta.php" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label>Pregunta 1: ¿Cómo calificaría nuestra fuente de informacion?</label>
+            <input type="radio" name="pregunta1" value="excelente"> Excelente
+            <input type="radio" name="pregunta1" value="bueno"> Bueno
+            <input type="radio" name="pregunta1" value="regular"> Regular
+            <input type="radio" name="pregunta1" value="malo"> Malo
+
+            <label>Pregunta 2: ¿Recomendaría nuestro servicio a otras personas?</label>
+            <input type="radio" name="pregunta2" value="si"> Sí
+            <input type="radio" name="pregunta2" value="no"> No
+
+            <label for="comentarios">Comentarios opcionales:</label>
+            <input type="text" id="comentarios" name="comentarios">
+
+            <input type="submit" value="Enviar encuesta">
+        </form>
+    </div>
+
+</body>
+
+</html>

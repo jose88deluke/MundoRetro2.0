@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Example</title>
+    <link rel="shortcut icon" href="img/logo web.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 9px;
+
+        }
+
+        h4 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav {
+            background-color: #555;
+            overflow: hidden;
+            display: flex;
+
+
+        }
+
+        nav a {
+
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 13px;
+            text-decoration: none;
+        }
+
+        nav {
+            background-color: #777;
+        }
+
+        main {
+            padding: 25px;
+            background-color: white;
+            margin: auto;
+            width: 85%;
+            text-align: center;
+        }
+
+        li {
+            flex: 1;
+        }
+
+        ul {
+            justify-content: left;
+        }
+
+        footer {
+            margin-top: 50px;
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            border-radius: 1rem;
+            width: 200px;
+            height: 60px;
+            justify-content: center;
+            box-shadow: 0px 0px 10px 0px rgb(8, 121, 17);
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        .name {
+            color: blue;
+        }
+
+        .aviso {
+            color: red;
+        }
+        /*sub menu*/
+        nav li ul li {
+            width: 200px;
+            display: flex;
+            flex-direction: column;
+            background-color: #777;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            padding: 15px 0px;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            z-index: 10;
+            text-align: center;
+            color: white;
+        }
+
+        nav li:hover>ul li {
+            visibility: visible;
+            opacity: 1;
+            list-style: none;
+            position: absolute;
+            top: 165px;
+            left: 135px;
+        }
+
+        nav li ul::before {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+
+        }
+
+        nav li ul li a {
+            display: block;
+            color: #fff;
+            padding: 6px;
+            padding-left: 14px;
+            margin-top: 10px;
+            font-size: 14px;
+            text-transform: uppercase;
+            transition: all 300ms ease;
+        }
+
+        nav li ul li a:hover {
+            background-color: rgb(193, 206, 254);
+            color: white;
+            transform: scale(1.1);
+            padding-left: 30px;
+            font-size: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h4><a class="navbar-brand" href=""><img src="img/logo web.png" alt="logo" height="40">Mundo Retro</a>
+        </h4>
+    </header>
+    <nav>
+
+        <li><a href="inicio.html"><b>Inicio</b></a>
+            <ul>
+                <li><a href="encuesta.html"><b>encuesta</b></a></li>
+            </ul>
+        </li>
+        <li><a href="requisitos.html"><b>Requisitos</b></a></li>
+        <li><a href="Tutorial.html"><b>Tutorial</b></a></li>
+        <li><a href="Juegos.html"><b>Juegos</b></a></li>
+
+    </nav>
+
+    <main>
+        <video width="560" height="315" src="videos/pexels-rodnae-productions-7914856 (1080p).mp4" autoplay
+            controls></video>
+        <h3>Emulador batocera:</h3>
+        <a class="fcc-btn" href="https://batocera.org/download">
+            <button type="submit"><B>Descargar</B></button>
+        </a>
+        <h3>Información sobre Emuladores</h3>
+
+        <p>Los emuladores son programas de software que permiten ejecutar código diseñado para una plataforma de
+            hardware específica en otra plataforma diferente. Principalmente, se utilizan para emular videojuegos y
+            aplicaciones de consolas o sistemas operativos en hardware moderno.</p>
+    </main>
+    <footer>
+        <h2 class="aviso"><b>Atencion:</b></h2>
+        <p class="aviso">
+
+            Piratear juegos conlleva riesgos legales, como multas y acciones judiciales, además de riesgos de seguridad,
+            como la posibilidad de descargar malware. Las versiones pirateadas carecen de actualizaciones y soporte
+            oficial, pueden presentar problemas de rendimiento y excluyen a los usuarios de servicios en línea. Además,
+            la piratería afecta negativamente a la industria del desarrollo de juegos al reducir los ingresos y
+            desalentar la creación de nuevos títulos emocionantes. Se recomienda adquirir y utilizar juegos de manera
+            legal para una experiencia de juego segura y completa.</p>
+        <p class="name">&copy; Jose Antonio Vallejo Carretero</p>
+    </footer>
+
+</body>
+
+</html>
